@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- FIRE 29: Lava Flow (Лавовый поток) -->
+  <g transform="translate(200, 200)">
+    <!-- Основной поток -->
+    <path d="M -90 60 Q -60 45 -30 30 Q 0 15 30 5 Q 60 -5 90 -10" 
+          stroke="#FF7043" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Боковые потоки -->
+    <path d="M -60 65 Q -40 55 -20 45" 
+          stroke="#FFAB40" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 60 55 Q 40 50 20 45" 
+          stroke="#FFAB40" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Пузыри лавы -->
+    <ellipse cx="-45" cy="40" rx="8" ry="12" 
+             stroke="#FFCC02" 
+             stroke-width="3" 
+             fill="none" 
+             filter="url(#symbol-glow)"/>
+    
+    <ellipse cx="0" cy="15" rx="6" ry="10" 
+             stroke="#FFCC02" 
+             stroke-width="3" 
+             fill="none" 
+             filter="url(#symbol-glow)"/>
+    
+    <ellipse cx="45" cy="5" rx="10" ry="15" 
+             stroke="#FFCC02" 
+             stroke-width="3" 
+             fill="none" 
+             filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-90" cy="60" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="90" cy="-10" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="45" cy="5" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

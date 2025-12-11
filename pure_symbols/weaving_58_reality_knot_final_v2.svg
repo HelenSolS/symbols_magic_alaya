@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="weavingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#E0E0E0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- WEAVING 58: Reality Knot (Узел реальности) - КОСМИЧЕСКОЕ ПЛЕТЕНИЕ -->
+  <g transform="translate(200, 200)">
+    <!-- Узел -->
+    <path d="M -60 0 Q -30 -40 0 -30 Q 30 -20 40 10 Q 45 35 20 50 Q -5 65 -30 55 Q -55 45 -60 20 Q -65 -5 -45 -20 Q -25 -35 0 -40 Q 25 -35 40 -15" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="8" 
+          stroke-opacity="0.7"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Внутренняя часть узла -->
+    <path d="M -40 5 Q -20 -20 0 -15 Q 20 -10 25 15 Q 28 25 15 35 Q 0 45 -15 40 Q -30 35 -35 15 Q -40 0 -30 -10 Q -20 -20 0 -22 Q 20 -18 28 -8" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="5" 
+          stroke-opacity="0.8"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Центр -->
+    <circle cx="0" cy="0" r="6" 
+            fill="#FFFFFF" 
+            fill-opacity="0.9"
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-60" cy="0" r="3" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="40" cy="10" r="3" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="20" cy="50" r="3" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- Символ Fire - The Spark (Искра) -->
+  <g transform="translate(150, 150)">
+    <!-- Центральная короткая линия -->
+    <path d="M -15 0 L 15 0" 
+          stroke="#FF8A65" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Левая ветвь -->
+    <path d="M -5 -8 L -25 -25" 
+          stroke="#FF8A65" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая ветвь -->
+    <path d="M 5 -8 L 25 -25" 
+          stroke="#FF8A65" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Центральная вспышка -->
+    <circle cx="0" cy="0" r="12" fill="#FFAB40" filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-15" cy="0" r="2" fill="#FFAB40" filter="url(#symbol-glow)"/>
+    <circle cx="15" cy="0" r="2" fill="#FFAB40" filter="url(#symbol-glow)"/>
+    <circle cx="-25" cy="-25" r="2" fill="#FFAB40" filter="url(#symbol-glow)"/>
+    <circle cx="25" cy="-25" r="2" fill="#FFAB40" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

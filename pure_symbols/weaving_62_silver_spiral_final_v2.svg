@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="weavingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#E0E0E0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- WEAVING 62: Silver Spiral (Серебряная спираль) - КОСМИЧЕСКОЕ ПЛЕТЕНИЕ -->
+  <g transform="translate(200, 200)">
+    <!-- Двойная спираль -->
+    <path d="M 0 -80 Q 35 -80 55 -65 Q 70 -45 65 -25 Q 55 -5 35 10 Q 10 20 -15 15 Q -35 5 -45 -15 Q -50 -35 -40 -50 Q -25 -70 0 -80" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="7" 
+          stroke-opacity="0.7"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 0 80 Q -35 80 -55 65 Q -70 45 -65 25 Q -55 5 -35 -10 Q -10 -20 15 -15 Q 35 -5 45 15 Q 50 35 40 50 Q 25 70 0 80" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="7" 
+          stroke-opacity="0.7"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Центр -->
+    <circle cx="0" cy="0" r="10" 
+            fill="#FFFFFF" 
+            fill-opacity="0.9"
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-80" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="80" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="65" cy="-25" r="3" fill="#FFFFFF" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="-65" cy="25" r="3" fill="#FFFFFF" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

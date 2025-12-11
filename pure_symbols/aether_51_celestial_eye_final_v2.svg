@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="aetherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#FFD54F;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFF176;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#000000"/>
+  
+  <!-- AETHER 51: Celestial Eye (Небесное око) - КОСМИЧЕСКИЙ ЭФИР -->
+  <g transform="translate(200, 200)">
+    <!-- Внешнее око -->
+    <ellipse cx="0" cy="0" rx="70" ry="45" 
+             stroke="url(#aetherGradient)" 
+             stroke-width="8" 
+             stroke-opacity="0.7"
+             fill="none" 
+             filter="url(#cosmic-glow)"/>
+    
+    <!-- Внутреннее око -->
+    <ellipse cx="0" cy="0" rx="45" ry="30" 
+             stroke="url(#aetherGradient)" 
+             stroke-width="5" 
+             stroke-opacity="0.8"
+             fill="none" 
+             filter="url(#cosmic-glow)"/>
+    
+    <!-- Зрачок -->
+    <ellipse cx="0" cy="0" rx="15" ry="20" 
+             fill="#FFFFFF" 
+             fill-opacity="0.9"
+             filter="url(#cosmic-glow)"/>
+    
+    <!-- Блики -->
+    <circle cx="-8" cy="-5" r="5" fill="#FFF176" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="8" cy="5" r="3" fill="#FFFFFF" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    
+    <!-- Лучи зрения -->
+    <path d="M -40 -35 Q -60 -50 -80 -70" 
+          stroke="url(#aetherGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.6"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 40 -35 Q 60 -50 80 -70" 
+          stroke="url(#aetherGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.6"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-45" r="3" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="-80" cy="-70" r="3" fill="#FFFFFF" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="80" cy="-70" r="3" fill="#FFFFFF" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

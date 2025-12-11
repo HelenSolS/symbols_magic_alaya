@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 5: Twin Winds (Двойные Ветры) - ДВА СИММЕТРИЧНЫХ ВИХРЯ / ДВЕ ЗЕРКАЛЬНЫЕ ЛИНИИ -->
+  <g transform="translate(150, 150)">
+    <!-- Левый вихрь -->
+    <path d="M -50 40 Q -60 20 -55 0 Q -50 -20 -40 -40 Q -30 -60 -15 -75" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правый вихрь (зеркальный) -->
+    <path d="M 50 40 Q 60 20 55 0 Q 50 -20 40 -40 Q 30 -60 15 -75" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Соединительная часть внизу -->
+    <path d="M -40 -40 Q -20 -35 0 -30 Q 20 -35 40 -40" 
+          stroke="#87CEEB" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-50" cy="40" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="50" cy="40" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-15" cy="-75" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="15" cy="-75" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

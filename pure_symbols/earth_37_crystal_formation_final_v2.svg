@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- EARTH 37: Crystal Formation (Кристаллическая формация) -->
+  <g transform="translate(200, 200)">
+    <!-- Центральный кристалл -->
+    <path d="M 0 -50 L 15 -25 L 20 0 L 15 25 L 0 50 L -15 25 L -20 0 L -15 -25 Z" 
+          stroke="#8D6E63" 
+          stroke-width="6" 
+          fill="none" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Боковые кристаллы -->
+    <path d="M -40 -20 L -30 -10 L -25 5 L -30 20 L -40 30 L -45 15 L -50 0 L -45 -15 Z" 
+          stroke="#A1887F" 
+          stroke-width="4" 
+          fill="none" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 40 -20 L 30 -10 L 25 5 L 30 20 L 40 30 L 45 15 L 50 0 L 45 -15 Z" 
+          stroke="#A1887F" 
+          stroke-width="4" 
+          fill="none" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Соединительные линии -->
+    <path d="M -15 -25 L -40 -20" 
+          stroke="#D7CCC8" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 15 -25 L 40 -20" 
+          stroke="#D7CCC8" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-50" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+    <circle cx="-50" cy="0" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+    <circle cx="50" cy="0" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

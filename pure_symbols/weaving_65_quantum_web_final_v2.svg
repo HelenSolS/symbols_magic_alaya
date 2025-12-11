@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="weavingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#E0E0E0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#F5F5F5;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- WEAVING 65: Quantum Web (Квантовая паутина) - КОСМИЧЕСКОЕ ПЛЕТЕНИЕ -->
+  <g transform="translate(200, 200)">
+    <!-- Радиальные лучи -->
+    <path d="M 0 -70 L 0 -85" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 49 -49 L 59 -59" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 70 0 L 85 0" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 49 49 L 59 59" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 0 70 L 0 85" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M -49 49 L -59 59" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M -70 0 L -85 0" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M -49 -49 L -59 -59" 
+          stroke="url(#weavingGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.8"
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Концентрические окружности -->
+    <circle cx="0" cy="0" r="25" 
+            stroke="url(#weavingGradient)" 
+            stroke-width="3" 
+            stroke-opacity="0.6"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <circle cx="0" cy="0" r="45" 
+            stroke="url(#weavingGradient)" 
+            stroke-width="2" 
+            stroke-opacity="0.5"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <circle cx="0" cy="0" r="65" 
+            stroke="url(#weavingGradient)" 
+            stroke-width="2" 
+            stroke-opacity="0.4"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Центр -->
+    <circle cx="0" cy="0" r="8" 
+            fill="#FFFFFF" 
+            fill-opacity="0.9"
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-85" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="85" cy="0" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="85" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

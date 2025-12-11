@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="aetherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.7" />
+      <stop offset="50%" style="stop-color:#FFD54F;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FFF176;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#000000"/>
+  
+  <!-- AETHER 48: Divine Spiral (Божественная спираль) - КОСМИЧЕСКИЙ ЭФИР -->
+  <g transform="translate(200, 200)">
+    <!-- Спираль -->
+    <path d="M 0 -85 Q 40 -85 65 -65 Q 85 -40 80 -15 Q 70 15 45 25 Q 15 30 -20 25 Q -50 15 -65 -5 Q -75 -30 -60 -50 Q -40 -75 0 -85" 
+          stroke="url(#aetherGradient)" 
+          stroke-width="8" 
+          stroke-opacity="0.7"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Внутренняя спираль -->
+    <path d="M 0 -60 Q 30 -60 48 -48 Q 60 -30 55 -10 Q 45 10 25 18 Q 0 22 -18 18 Q -35 10 -45 -5 Q -50 -25 -40 -35 Q -25 -50 0 -60" 
+          stroke="url(#aetherGradient)" 
+          stroke-width="5" 
+          stroke-opacity="0.8"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Центр -->
+    <circle cx="0" cy="0" r="8" 
+            fill="#FFFFFF" 
+            fill-opacity="0.9"
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-85" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="80" cy="-15" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="-65" cy="-5" r="4" fill="#FFFFFF" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

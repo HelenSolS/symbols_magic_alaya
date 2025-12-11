@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 11: The Watcher (Наблюдатель) - ГЛАЗ БЕЗ ЗРАЧКА, ТОЛЬКО КОНТУР + ДУГА СВЕТА -->
+  <g transform="translate(150, 150)">
+    <!-- Верхняя дуга глаза -->
+    <path d="M -25 -10 Q 0 -25 25 -10" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Нижняя дуга глаза -->
+    <path d="M -25 10 Q 0 25 25 10" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Внешние контуры глаза -->
+    <path d="M -25 -10 Q -30 0 -25 10" 
+          stroke="#87CEEB" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 25 -10 Q 30 0 25 10" 
+          stroke="#87CEEB" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Внутренняя область глаза (пустая - без зрачка) -->
+    <ellipse cx="0" cy="0" rx="18" ry="12" 
+             fill="none" 
+             stroke="#87CEEB" 
+             stroke-width="2" 
+             opacity="0.4"
+             filter="url(#symbol-glow)"/>
+    
+    <!-- Дуга света сверху -->
+    <path d="M -20 -25 Q 0 -35 20 -25" 
+          stroke="#87CEEB" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.6"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="0" r="5" fill="#B0E0E6" filter="url(#symbol-glow)" opacity="0.3"/>
+    <circle cx="0" cy="-35" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

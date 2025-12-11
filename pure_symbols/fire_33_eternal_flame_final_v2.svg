@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- FIRE 33: Eternal Flame (Вечный огонь) -->
+  <g transform="translate(200, 200)">
+    <!-- Центральное пламя -->
+    <path d="M 0 -80 Q 25 -65 20 -45 Q 15 -25 0 -10 Q -15 -25 -20 -45 Q -25 -65 0 -80" 
+          stroke="#FF7043" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Внешний круг защиты -->
+    <circle cx="0" cy="0" r="85" 
+            stroke="#FFAB40" 
+            stroke-width="3" 
+            fill="none" 
+            stroke-dasharray="10,5" 
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Боковые языки -->
+    <path d="M -18 -55 Q -35 -45 -40 -30 Q -35 -15 -25 -5" 
+          stroke="#FFAB40" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 18 -55 Q 35 -45 40 -30 Q 35 -15 25 -5" 
+          stroke="#FFAB40" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Основание -->
+    <ellipse cx="0" cy="15" rx="22" ry="10" 
+             stroke="#FF7043" 
+             stroke-width="4" 
+             fill="none" 
+             filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-80" r="4" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="-40" cy="-30" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="40" cy="-30" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

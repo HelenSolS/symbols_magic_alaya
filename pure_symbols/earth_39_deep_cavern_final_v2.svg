@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- EARTH 39: Deep Cavern (Глубокая пещера) -->
+  <g transform="translate(200, 200)">
+    <!-- Вход в пещеру -->
+    <path d="M -50 50 Q -40 30 -30 10 Q -20 -10 0 -15 Q 20 -10 30 10 Q 40 30 50 50" 
+          stroke="#8D6E63" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Туннель -->
+    <path d="M -25 30 Q -20 10 -10 -10 Q 0 -20 10 -10 Q 20 10 25 30" 
+          stroke="#A1887F" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Глубина -->
+    <path d="M -10 10 Q 0 0 10 10" 
+          stroke="#D7CCC8" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Сталагмиты -->
+    <rect x="-35" y="40" width="6" height="20" 
+          fill="#8D6E63" 
+          filter="url(#symbol-glow)"/>
+    
+    <rect x="-15" y="45" width="4" height="15" 
+          fill="#8D6E63" 
+          filter="url(#symbol-glow)"/>
+    
+    <rect x="15" y="45" width="4" height="15" 
+          fill="#8D6E63" 
+          filter="url(#symbol-glow)"/>
+    
+    <rect x="35" y="40" width="6" height="20" 
+          fill="#8D6E63" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-15" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+    <circle cx="-25" cy="30" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+    <circle cx="25" cy="30" r="3" fill="#D7CCC8" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- FIRE 27: Phoenix Feather (Перо феникса) -->
+  <g transform="translate(200, 200)">
+    <!-- Основная линия пера -->
+    <path d="M -25 80 Q -15 50 -8 25 Q 0 0 8 -25 Q 15 -50 25 -80" 
+          stroke="#FF7043" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Опахало пера -->
+    <path d="M -8 25 Q -20 15 -32 5" 
+          stroke="#FFAB40" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 0 0 Q -12 -8 -24 -15" 
+          stroke="#FFAB40" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 8 -25 Q -4 -35 -16 -45" 
+          stroke="#FFCC02" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-25" cy="80" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="25" cy="-80" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="-32" cy="5" r="2" fill="#FFCC02" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

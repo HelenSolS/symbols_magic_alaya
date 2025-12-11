@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="waterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#26A69A;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#4DB6AC;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#80CBC4;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#000911"/>
+  
+  <!-- WATER 12: First Ripple (Первая рябь) - КОСМИЧЕСКАЯ ВОДА -->
+  <g transform="translate(200, 200)">
+    <!-- Концентрические волны с градиентами -->
+    <circle cx="0" cy="0" r="85" 
+            stroke="url(#waterGradient)" 
+            stroke-width="8" 
+            stroke-opacity="0.7"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <circle cx="0" cy="0" r="55" 
+            stroke="url(#waterGradient)" 
+            stroke-width="6" 
+            stroke-opacity="0.8"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <circle cx="0" cy="0" r="25" 
+            stroke="url(#waterGradient)" 
+            stroke-width="4" 
+            stroke-opacity="0.6"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Центральная точка энергии -->
+    <circle cx="0" cy="0" r="6" 
+            fill="#80CBC4" 
+            fill-opacity="0.8"
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые частицы на волнах -->
+    <circle cx="85" cy="0" r="4" fill="#B2DFDB" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="-85" cy="0" r="4" fill="#B2DFDB" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="85" r="4" fill="#B2DFDB" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="-85" r="4" fill="#B2DFDB" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

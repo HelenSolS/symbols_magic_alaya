@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- FIRE 26: Solar Ray (Солнечный луч) -->
+  <g transform="translate(200, 200)">
+    <!-- Центральный луч -->
+    <path d="M 0 -80 L 0 -30" 
+          stroke="#FF7043" 
+          stroke-width="10" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Боковые лучи -->
+    <path d="M -20 -70 L -8 -40" 
+          stroke="#FFAB40" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 20 -70 L 8 -40" 
+          stroke="#FFAB40" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M -35 -55 L -15 -35" 
+          stroke="#FFCC02" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M 35 -55 L 15 -35" 
+          stroke="#FFCC02" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Центральная корона -->
+    <circle cx="0" cy="-30" r="12" 
+            stroke="#FFCC02" 
+            stroke-width="3" 
+            fill="none" 
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-80" r="4" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="-35" cy="-55" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="35" cy="-55" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

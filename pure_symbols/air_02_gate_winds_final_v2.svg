@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 2: Gate of Winds - ПРОВЕРЯЮ ПРОПОРЦИИ -->
+  <g transform="translate(150, 150)">
+    <!-- Левая вертикальная линия -->
+    <path d="M -48 -80 L -48 80" 
+          stroke="#64B5F6" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая вертикальная линия -->
+    <path d="M 48 -80 L 48 80" 
+          stroke="#64B5F6" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Вихревое смещение между линиями -->
+    <path d="M -30 -35 Q -20 -45 0 -40 Q 20 -35 30 -25 Q 35 -15 30 -5 Q 20 5 0 10 Q -20 5 -30 -5 Q -35 -15 -30 -25 Q -20 -35 0 -40 Q 20 -45 30 -35" 
+          stroke="#64B5F6" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-48" cy="-80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="48" cy="-80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="-48" cy="80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="48" cy="80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

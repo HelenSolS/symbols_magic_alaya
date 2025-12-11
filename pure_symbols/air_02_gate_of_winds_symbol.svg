@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- Символ Air - Gate of Winds (Врата Ветров) -->
+  <g transform="translate(150, 150)">
+    <!-- Левая вертикальная линия -->
+    <path d="M -40 -80 L -40 80" 
+          stroke="#87CEEB" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая вертикальная линия -->
+    <path d="M 40 -80 L 40 80" 
+          stroke="#87CEEB" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Вихревое смещение между линиями -->
+    <path d="M -20 -20 Q 0 -30 20 -20 Q 30 -10 20 0 Q 0 10 -20 0 Q -30 -10 -20 -20" 
+          stroke="#87CEEB" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-40" cy="-80" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="40" cy="-80" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

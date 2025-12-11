@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 9: Turning Breath (Разворот Ветра) - СПИРАЛЬ, РЕЗКО МЕНЯЮЩАЯ НАПРАВЛЕНИЕ -->
+  <g transform="translate(150, 150)">
+    <!-- Спираль, резко меняющая направление -->
+    <path d="M 0 -70 Q 20 -60 25 -45 Q 30 -30 25 -15 Q 20 0 10 15 Q 0 30 -15 40 Q -30 50 -45 45 Q -55 40 -60 30 Q -65 20 -60 10 Q -55 0 -45 -10" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-70" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="25" cy="-15" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-60" cy="10" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-45" cy="-10" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

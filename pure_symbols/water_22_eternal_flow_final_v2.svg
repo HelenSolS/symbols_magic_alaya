@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- WATER 22: Eternal Flow (Вечный поток) -->
+  <g transform="translate(200, 200)">
+    <!-- Основной поток -->
+    <path d="M -80 -60 Q -50 -50 -20 -40 Q 10 -30 40 -25 Q 70 -20 80 -10" 
+          stroke="#26A69A" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M -70 -30 Q -40 -25 -10 -20 Q 20 -15 50 -10 Q 75 -5 70 10" 
+          stroke="#4DB6AC" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M -60 0 Q -30 -5 0 -5 Q 30 -5 60 0 Q 75 5 65 20" 
+          stroke="#80CBC4" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Циклическая связь -->
+    <path d="M 65 20 Q 45 35 25 40 Q 5 45 -15 40 Q -35 35 -50 25 Q -60 15 -55 5" 
+          stroke="#26A69A" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-80" cy="-60" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+    <circle cx="80" cy="-10" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+    <circle cx="-55" cy="5" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

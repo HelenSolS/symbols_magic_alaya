@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 8: The Veil (Покров) - МЯГКАЯ ПОЛУПРОЗРАЧНАЯ ФОРМА, СКРЫВАЮЩАЯ ЦЕНТРАЛЬНУЮ ТОЧКУ -->
+  <g transform="translate(150, 150)">
+    <!-- Центральная точка (скрываемая) -->
+    <circle cx="0" cy="0" r="8" fill="#B0E0E6" filter="url(#symbol-glow)" opacity="0.8"/>
+    
+    <!-- Полупрозрачная форма-покров -->
+    <path d="M -40 -15 Q -20 -25 0 -20 Q 20 -25 40 -15 Q 35 10 20 25 Q 0 30 -20 25 Q -35 10 -40 -15 Z" 
+          stroke="#87CEEB" 
+          stroke-width="3" 
+          fill="#87CEEB" 
+          opacity="0.3"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Дополнительные контуры покрова -->
+    <path d="M -35 -10 Q -15 -18 0 -15 Q 15 -18 35 -10" 
+          stroke="#87CEEB" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.5"
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M -30 0 Q -10 -5 0 -3 Q 10 -5 30 0" 
+          stroke="#87CEEB" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.4"
+          filter="url(#symbol-glow)"/>
+    
+    <path d="M -25 10 Q -8 5 0 7 Q 8 5 25 10" 
+          stroke="#87CEEB" 
+          stroke-width="2" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.4"
+          filter="url(#symbol-glow)"/>
+  </g>
+</svg>

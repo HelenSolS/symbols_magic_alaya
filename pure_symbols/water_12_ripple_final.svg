@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- WATER 12: The Ripple (Рябь) - КОНЦЕНТРИЧЕСКИЕ КРУГИ, РАСХОДЯЩИЕСЯ ОТ ТОЧКИ -->
+  <g transform="translate(150, 150)">
+    <!-- Центральная точка -->
+    <circle cx="0" cy="0" r="4" fill="#4DD0E1" filter="url(#symbol-glow)"/>
+    
+    <!-- Первый круг -->
+    <circle cx="0" cy="0" r="18" 
+            stroke="#4DD0E1" 
+            stroke-width="4" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Второй круг -->
+    <circle cx="0" cy="0" r="32" 
+            stroke="#4DD0E1" 
+            stroke-width="4" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Третий круг -->
+    <circle cx="0" cy="0" r="46" 
+            stroke="#4DD0E1" 
+            stroke-width="4" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Четвертый круг -->
+    <circle cx="0" cy="0" r="60" 
+            stroke="#4DD0E1" 
+            stroke-width="4" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="0" r="10" fill="#26C6DA" filter="url(#symbol-glow)" opacity="0.5"/>
+  </g>
+</svg>

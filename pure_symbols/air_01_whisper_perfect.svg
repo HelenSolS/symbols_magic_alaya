@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 1: The Whisper (Шёпот) - ОДИНАКОВЫЙ РАЗМЕР ДЛЯ ВСЕХ СИМВОЛОВ -->
+  <g transform="translate(150, 150)">
+    <!-- Основная изогнутая линия -->
+    <path d="M 0 -80 Q -12 -48 -24 0 Q -36 48 -48 80" 
+          stroke="#64B5F6" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Левая ветвь -->
+    <path d="M -24 0 Q -48 -12 -72 -24" 
+          stroke="#64B5F6" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая ветвь -->
+    <path d="M -24 0 Q 0 -12 24 -24" 
+          stroke="#64B5F6" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="-48" cy="80" r="3" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="-72" cy="-24" r="2" fill="#90CAF9" filter="url(#symbol-glow)"/>
+    <circle cx="24" cy="-24" r="2" fill="#90CAF9" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

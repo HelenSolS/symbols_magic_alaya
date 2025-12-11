@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- Символ Earth - Rootmark (Корень) -->
+  <g transform="translate(150, 150)">
+    <!-- Основной ствол -->
+    <path d="M 0 -60 L 0 0" 
+          stroke="#CDDC39" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Левая ветвь -->
+    <path d="M 0 0 L -30 -30 L -50 -50" 
+          stroke="#CDDC39" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая ветвь -->
+    <path d="M 0 0 L 30 -30 L 50 -50" 
+          stroke="#CDDC39" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-60" r="3" fill="#C0CA33" filter="url(#symbol-glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#C0CA33" filter="url(#symbol-glow)"/>
+    <circle cx="-50" cy="-50" r="2" fill="#C0CA33" filter="url(#symbol-glow)"/>
+    <circle cx="50" cy="-50" r="2" fill="#C0CA33" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

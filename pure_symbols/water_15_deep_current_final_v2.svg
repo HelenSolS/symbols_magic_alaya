@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- WATER 15: Deep Current (Глубокое течение) -->
+  <g transform="translate(200, 200)">
+    <!-- Спиральное течение -->
+    <path d="M 0 -80 Q 30 -80 50 -65 Q 70 -40 65 -15 Q 55 15 30 25 Q 0 30 -25 20 Q -50 5 -55 -25 Q -50 -55 -25 -70 Q 5 -80 0 -80" 
+          stroke="#26A69A" 
+          stroke-width="7" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Внутреннее течение -->
+    <path d="M 0 -55 Q 20 -55 35 -45 Q 45 -30 42 -10 Q 35 10 20 18 Q 0 22 -18 15 Q -35 5 -38 -15 Q -35 -35 -20 -45 Q 0 -55 0 -55" 
+          stroke="#4DB6AC" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Центральная точка -->
+    <circle cx="0" cy="0" r="6" 
+            stroke="#80CBC4" 
+            stroke-width="2" 
+            fill="none" 
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-80" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+    <circle cx="65" cy="-15" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+    <circle cx="-55" cy="-25" r="3" fill="#80CBC4" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

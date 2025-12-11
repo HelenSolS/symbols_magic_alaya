@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="400" height="400" fill="#0a0a0a"/>
+  
+  <!-- FIRE 28: Burning Spiral (Горящая спираль) -->
+  <g transform="translate(200, 200)">
+    <!-- Спираль -->
+    <path d="M 0 -70 Q 35 -70 55 -55 Q 70 -35 65 -15 Q 55 5 35 15 Q 10 20 -15 15 Q -35 5 -45 -15 Q -50 -35 -40 -50 Q -25 -70 0 -70" 
+          stroke="#FF7043" 
+          stroke-width="7" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Внутренняя спираль -->
+    <path d="M 0 -50 Q 25 -50 40 -40 Q 50 -25 45 -10 Q 35 5 20 12 Q 0 15 -18 10 Q -30 0 -35 -15 Q -30 -30 -15 -40 Q 5 -50 0 -50" 
+          stroke="#FFAB40" 
+          stroke-width="5" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Центр -->
+    <circle cx="0" cy="0" r="6" 
+            stroke="#FFCC02" 
+            stroke-width="2" 
+            fill="none" 
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-70" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="65" cy="-15" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+    <circle cx="-45" cy="-15" r="3" fill="#FFCC02" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

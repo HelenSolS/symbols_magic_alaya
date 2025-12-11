@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 3: The Signal (Сигнал) - КРУГ + 3 РАСХОДЯЩИЕСЯ ЛУЧА, КАК МАЯК -->
+  <g transform="translate(150, 150)">
+    <!-- Центральный круг -->
+    <circle cx="0" cy="0" r="25" 
+            stroke="#87CEEB" 
+            stroke-width="6" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Луч вверх (как маяк) -->
+    <path d="M 0 -25 L 0 -65" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Луч вправо -->
+    <path d="M 25 0 L 65 0" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Луч вниз -->
+    <path d="M 0 25 L 0 65" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="0" r="8" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="0" cy="-65" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="65" cy="0" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="0" cy="65" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- AIR 6: The Messenger (Посланник) - СТРЕЛА СВЕТА, ПРОХОДЯЩАЯ ЧЕРЕЗ КРУГ -->
+  <g transform="translate(150, 150)">
+    <!-- Центральный круг -->
+    <circle cx="0" cy="0" r="25" 
+            stroke="#87CEEB" 
+            stroke-width="6" 
+            fill="none"
+            filter="url(#symbol-glow)"/>
+    
+    <!-- Стрела слева -->
+    <path d="M -60 0 L -25 0" 
+          stroke="#87CEEB" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Острие стрелы слева -->
+    <path d="M -60 0 L -55 -8 L -55 8 Z" 
+          fill="#87CEEB" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Стрела справа (проходит через круг) -->
+    <path d="M 25 0 L 60 0" 
+          stroke="#87CEEB" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Острие стрелы справа -->
+    <path d="M 60 0 L 55 -8 L 55 8 Z" 
+          fill="#87CEEB" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="0" r="8" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-60" cy="0" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="60" cy="0" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

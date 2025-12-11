@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="earthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8D6E63;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#A1887F;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#D7CCC8;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#110b0b"/>
+  
+  <!-- EARTH 42: Desert Dune (Пустынная дюна) - КОСМИЧЕСКАЯ ЗЕМЛЯ -->
+  <g transform="translate(200, 200)">
+    <!-- Основная дюна -->
+    <path d="M -90 40 Q -60 0 -30 -20 Q 0 -30 30 -20 Q 60 0 90 40" 
+          stroke="url(#earthGradient)" 
+          stroke-width="8" 
+          stroke-opacity="0.7"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Вторая дюна -->
+    <path d="M -70 25 Q -45 -10 -20 -25 Q 5 -30 25 -25 Q 45 -10 70 25" 
+          stroke="url(#earthGradient)" 
+          stroke-width="6" 
+          stroke-opacity="0.8"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Мини-дюны -->
+    <path d="M -45 10 Q -35 0 -25 -5" 
+          stroke="url(#earthGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.6"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 25 -5 Q 35 0 45 10" 
+          stroke="url(#earthGradient)" 
+          stroke-width="4" 
+          stroke-opacity="0.6"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Ветер -->
+    <path d="M -80 50 Q -60 45 -40 40" 
+          stroke="url(#earthGradient)" 
+          stroke-width="3" 
+          stroke-opacity="0.5"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <path d="M 40 40 Q 60 45 80 50" 
+          stroke="url(#earthGradient)" 
+          stroke-width="3" 
+          stroke-opacity="0.5"
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="-90" cy="40" r="3" fill="#E8D5C4" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="90" cy="40" r="3" fill="#E8D5C4" fill-opacity="0.7" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="-30" r="4" fill="#E8D5C4" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>

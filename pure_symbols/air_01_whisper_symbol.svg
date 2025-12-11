@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Чистое свечение символа Air -->
+    <filter id="symbol-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Темный фон -->
+  <rect width="300" height="300" fill="#0a0a0a"/>
+  
+  <!-- Символ Air - The Whisper (Шёпот) -->
+  <g transform="translate(150, 150)">
+    <!-- Основная линия -->
+    <path d="M 0 -60 Q -15 -30 -20 0 Q -25 30 -30 60" 
+          stroke="#87CEEB" 
+          stroke-width="8" 
+          fill="none" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Левая ветвь -->
+    <path d="M -20 0 Q -40 -10 -60 -20" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Правая ветвь -->
+    <path d="M -20 0 Q 0 -10 20 -20" 
+          stroke="#87CEEB" 
+          stroke-width="6" 
+          fill="none" 
+          stroke-linecap="round" 
+          filter="url(#symbol-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-60" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-30" cy="60" r="3" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="-60" cy="-20" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+    <circle cx="20" cy="-20" r="2" fill="#B0E0E6" filter="url(#symbol-glow)"/>
+  </g>
+</svg>

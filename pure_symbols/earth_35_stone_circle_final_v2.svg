@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="cosmic-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="earthGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8D6E63;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#A1887F;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#D7CCC8;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="#110b0b"/>
+  
+  <!-- EARTH 35: Stone Circle (Каменный круг) - КОСМИЧЕСКАЯ ЗЕМЛЯ -->
+  <g transform="translate(200, 200)">
+    <!-- Внешний круг -->
+    <circle cx="0" cy="0" r="85" 
+            stroke="url(#earthGradient)" 
+            stroke-width="10" 
+            stroke-opacity="0.7"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Средний круг -->
+    <circle cx="0" cy="0" r="55" 
+            stroke="url(#earthGradient)" 
+            stroke-width="7" 
+            stroke-opacity="0.8"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Внутренний круг -->
+    <circle cx="0" cy="0" r="25" 
+            stroke="url(#earthGradient)" 
+            stroke-width="5" 
+            stroke-opacity="0.6"
+            fill="none" 
+            filter="url(#cosmic-glow)"/>
+    
+    <!-- Органичные каменные образования -->
+    <ellipse cx="0" cy="-85" rx="8" ry="12" 
+             fill="#A1887F" 
+             fill-opacity="0.7"
+             filter="url(#cosmic-glow)"/>
+    
+    <ellipse cx="0" cy="70" rx="8" ry="12" 
+             fill="#A1887F" 
+             fill-opacity="0.7"
+             filter="url(#cosmic-glow)"/>
+    
+    <ellipse cx="-85" cy="0" rx="12" ry="8" 
+             fill="#A1887F" 
+             fill-opacity="0.7"
+             filter="url(#cosmic-glow)"/>
+    
+    <ellipse cx="85" cy="0" rx="12" ry="8" 
+             fill="#A1887F" 
+             fill-opacity="0.7"
+             filter="url(#cosmic-glow)"/>
+    
+    <!-- Световые акценты -->
+    <circle cx="0" cy="-85" r="4" fill="#E8D5C4" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="85" cy="0" r="4" fill="#E8D5C4" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+    <circle cx="0" cy="85" r="4" fill="#E8D5C4" fill-opacity="0.8" filter="url(#cosmic-glow)"/>
+  </g>
+</svg>
