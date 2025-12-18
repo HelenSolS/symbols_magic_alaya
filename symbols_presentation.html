@@ -58,7 +58,18 @@
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-group-title {
+            font-size: 0.85em;
+            opacity: 0.7;
+            margin-bottom: 8px;
+            font-weight: 500;
         }
 
         .filter-button {
@@ -83,6 +94,18 @@
             background: linear-gradient(45deg, #4fc3f7, #03a9f4);
             border-color: #4fc3f7;
             color: #000;
+        }
+
+        .filter-button.file-type {
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 0.8em;
+            padding: 8px 16px;
+        }
+
+        .filter-button.file-type.active {
+            background: linear-gradient(45deg, #ab47bc, #8e24aa);
+            border-color: #ab47bc;
+            color: #fff;
         }
 
         .element-section {
@@ -296,14 +319,28 @@
         </div>
 
         <div class="filters">
-            <div class="filter-buttons">
-                <button class="filter-button active" onclick="showAllElements()">🌟 Все стихии</button>
-                <button class="filter-button" onclick="showElement('air')">🌬 Воздух (1-11)</button>
-                <button class="filter-button" onclick="showElement('water')">🌊 Вода (12-22)</button>
-                <button class="filter-button" onclick="showElement('fire')">🔥 Огонь (23-33)</button>
-                <button class="filter-button" onclick="showElement('earth')">🌍 Земля (34-44)</button>
-                <button class="filter-button" onclick="showElement('aether')">✨ Эфир (45-55)</button>
-                <button class="filter-button" onclick="showElement('weaving')">🌐 Переплетение (56-66)</button>
+            <!-- Фильтры по стихиям -->
+            <div class="filter-group">
+                <div class="filter-group-title">🎭 Стихии</div>
+                <div class="filter-buttons">
+                    <button class="filter-button active" onclick="showAllElements()">🌟 Все стихии</button>
+                    <button class="filter-button" onclick="showElement('air')">🌬 Воздух (1-11)</button>
+                    <button class="filter-button" onclick="showElement('water')">🌊 Вода (12-22)</button>
+                    <button class="filter-button" onclick="showElement('fire')">🔥 Огонь (23-33)</button>
+                    <button class="filter-button" onclick="showElement('earth')">🌍 Земля (34-44)</button>
+                    <button class="filter-button" onclick="showElement('aether')">✨ Эфир (45-55)</button>
+                    <button class="filter-button" onclick="showElement('weaving')">🌐 Переплетение (56-66)</button>
+                </div>
+            </div>
+            
+            <!-- Фильтры по типу файлов -->
+            <div class="filter-group">
+                <div class="filter-group-title">📁 Тип файлов</div>
+                <div class="filter-buttons">
+                    <button class="filter-button file-type active" onclick="filterByFileType('all')">🗂️ Все файлы</button>
+                    <button class="filter-button file-type" onclick="filterByFileType('svg')">📐 SVG файлы</button>
+                    <button class="filter-button file-type" onclick="filterByFileType('png')">🖼️ PNG файлы</button>
+                </div>
             </div>
         </div>
 
@@ -1080,6 +1117,7 @@
             }
             
             updateStatus(loadedCount);
+            applyFilters(); // Применяем фильтры после загрузки
         }
 
         // Обновление статуса
@@ -1097,22 +1135,33 @@
             }
         }
 
-        // Функции фильтрации
+        // Глобальные переменные для состояния фильтров
+        let currentElementFilter = 'all';
+        let currentFileTypeFilter = 'all';
+
+        // Функции фильтрации по стихиям
         function showAllElements() {
             document.querySelectorAll('.element-section').forEach(section => {
                 section.classList.remove('hidden');
             });
-            document.querySelectorAll('.filter-button').forEach(btn => {
+            
+            // Сбрасываем активные кнопки стихий
+            document.querySelectorAll('.filter-button:not(.file-type)').forEach(btn => {
                 btn.classList.remove('active');
             });
             document.querySelector('.filter-button').classList.add('active');
+            
+            currentElementFilter = 'all';
+            applyFilters();
         }
 
         function showElement(element) {
             document.querySelectorAll('.element-section').forEach(section => {
                 section.classList.add('hidden');
             });
-            document.querySelectorAll('.filter-button').forEach(btn => {
+            
+            // Сбрасываем активные кнопки стихий
+            document.querySelectorAll('.filter-button:not(.file-type)').forEach(btn => {
                 btn.classList.remove('active');
             });
             
@@ -1122,6 +1171,82 @@
             }
             
             event.target.classList.add('active');
+            currentElementFilter = element;
+            applyFilters();
+        }
+
+        // Функции фильтрации по типу файлов
+        function filterByFileType(fileType) {
+            // Сбрасываем активные кнопки типов файлов
+            document.querySelectorAll('.filter-button.file-type').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+            currentFileTypeFilter = fileType;
+            applyFilters();
+        }
+
+        // Применение комбинированных фильтров
+        function applyFilters() {
+            const allPlaceholders = document.querySelectorAll('.image-placeholder');
+            
+            allPlaceholders.forEach(placeholder => {
+                const img = placeholder.querySelector('img');
+                if (!img) return; // Пропускаем пустые placeholder'ы
+                
+                const imgSrc = img.src;
+                const imgAlt = img.alt;
+                
+                let shouldShow = true;
+                
+                // Фильтр по типу файла
+                if (currentFileTypeFilter !== 'all') {
+                    const isSVG = imgSrc.toLowerCase().includes('.svg') || imgAlt.toLowerCase().includes('svg');
+                    const isPNG = imgSrc.toLowerCase().includes('.png') || imgAlt.toLowerCase().includes('png');
+                    
+                    if (currentFileTypeFilter === 'svg' && !isSVG) {
+                        shouldShow = false;
+                    } else if (currentFileTypeFilter === 'png' && !isPNG) {
+                        shouldShow = false;
+                    }
+                }
+                
+                // Показываем/скрываем изображение
+                if (shouldShow) {
+                    img.style.display = 'block';
+                } else {
+                    img.style.display = 'none';
+                }
+            });
+            
+            // Обновляем счетчик
+            updateFileTypeStats();
+        }
+
+        // Обновление статистики по типам файлов
+        function updateFileTypeStats() {
+            const allImages = document.querySelectorAll('.symbol-image');
+            let svgCount = 0;
+            let pngCount = 0;
+            let otherCount = 0;
+            
+            allImages.forEach(img => {
+                const src = img.src.toLowerCase();
+                if (src.includes('.svg')) {
+                    svgCount++;
+                } else if (src.includes('.png')) {
+                    pngCount++;
+                } else {
+                    otherCount++;
+                }
+            });
+            
+            const statusText = document.getElementById('status-text');
+            if (svgCount > 0 || pngCount > 0) {
+                statusText.innerHTML = `📊 Отображено: ${svgCount} SVG, ${pngCount} PNG${otherCount > 0 ? `, ${otherCount} других` : ''}`;
+                statusText.style.color = '#4caf50';
+            }
         }
 
         // Плавная прокрутка к секциям
